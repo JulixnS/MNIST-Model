@@ -43,6 +43,8 @@ test_acc_values = []
 
 num_epochs = 50
 for epoch in range(num_epochs):
+    model.train()
+    
     predictions = model(X_train)
     BCELoss = loss(predictions, y_train)
     BCELoss.backward()
